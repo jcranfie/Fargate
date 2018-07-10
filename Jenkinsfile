@@ -34,5 +34,12 @@ pipeline
 				sh 'mvn -f BW/BusinessServices/APP.JMS.EMS.Demo.1.0.module.application.parent/pom.xml clean package initialize docker:push'
 			}
 		}
+		stage ('Create Fargate Task Stage')
+		{
+			steps
+			{
+				sh 'AWSCLI/createTask.sh'
+			}
+		}
 	}
 }
