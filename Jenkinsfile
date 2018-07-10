@@ -11,7 +11,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'env'
+				sh 'PATH=$PATH:/usr/local/bin;env'
 			}
 		}
 		stage ('Build Stage')
