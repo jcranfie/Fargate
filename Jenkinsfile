@@ -7,6 +7,13 @@ pipeline
     }
 	stages
 	{
+		stage ('Prep Stage')
+		{
+			steps
+			{
+				sh 'env'
+			}
+		}
 		stage ('Build Stage')
 		{
 			steps
