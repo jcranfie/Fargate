@@ -9,6 +9,7 @@ pipeline
       PATH = "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/apache-maven-3.5.3/bin"
       AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
       AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+	  AWS_DEFAULT_REGION    = "eu-west-1"
     }
 	stages
 	{
