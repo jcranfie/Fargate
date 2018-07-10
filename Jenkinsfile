@@ -11,14 +11,14 @@ pipeline
 		{
 			steps
 			{
-				sh 'mvn -f test/bwce-ems-demo/BW/BusinessServices/APP.JMS.EMS.Demo.1.0.module.application.parent/pom.xml clean package initialize docker:build'
+				sh 'mvn -f BW/BusinessServices/APP.JMS.EMS.Demo.1.0.module.application.parent/pom.xml clean package initialize docker:build'
 			}
 		}
 		stage ('Push Stage')
 		{
 			steps
 			{
-				sh 'mvn -f test/bwce-ems-demo/BW/BusinessServices/APP.JMS.EMS.Demo.1.0.module.application.parent/pom.xml clean package initialize docker:push'
+				sh 'mvn -f BW/BusinessServices/APP.JMS.EMS.Demo.1.0.module.application.parent/pom.xml clean package initialize docker:push'
 			}
 		}
 	}
