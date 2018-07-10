@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:audit="urn://co-opbank.co.ke/CommonServices/Data/Event/Audit" xmlns:fault="urn://co-opbank.co.ke/CommonServices/Data/Event/Fault" xmlns:tns="urn://co-opbank.co.ke/CommonServices/Message/TS/Util/Sub/SendExceptionEvent" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="urn://co-opbank.co.ke/CommonServices/Message/TS/Util/Sub/SendExceptionEvent">
+	
+	<!-- Imports -->
+	<xs:import namespace="urn://co-opbank.co.ke/CommonServices/Data/Event/Audit" schemaLocation="../../../../../../../../../XML/LIB_XML/Schemas/CommonServices/Data/Event/Audit.xsd"/>
+	<xs:import namespace="urn://co-opbank.co.ke/CommonServices/Data/Event/Fault" schemaLocation="../../../../../../../../../XML/LIB_XML/Schemas/CommonServices/Data/Event/Fault.xsd"/>
+
+	<!-- Elements -->
+	<xs:element name="SendExceptionEventRequest" type="tns:SendExceptionEventRequestType"/>
+
+	<!-- Complex Types -->
+   	<xs:complexType name="SendExceptionEventRequestType">
+   		<xs:sequence>
+   			<xs:element ref="audit:AuditOptions"/>
+			<xs:element ref="fault:Fault"/>
+   		</xs:sequence>
+  	</xs:complexType>
+
+    <xs:element name="operationRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="in" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

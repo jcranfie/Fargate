@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="urn:com:tescobank:tbsb:services:response:v1"
+	 xmlns:tbml="urn:com:tescobank:tbsb:services:common:messagelog:v1"
+	 targetNamespace="urn:com:tescobank:tbsb:services:response:v1"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="StatusCode"/>
+				<xs:element ref="StatusMessage" minOccurs="0"/>
+				<xs:element ref="Log" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StatusCode">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Successful"/>
+				<xs:enumeration value="Error"/>
+				<xs:enumeration value="Failed"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="StatusMessage" type="xs:string"/>
+	<xs:element name="Log" type="xs:string"/>
+</xs:schema>

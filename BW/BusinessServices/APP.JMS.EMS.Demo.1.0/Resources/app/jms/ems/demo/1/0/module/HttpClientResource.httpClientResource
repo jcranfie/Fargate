@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_UkXjkHqjEeijEPF0ZRZxgA" name="app.jms.ems.demo.1.0.module.HttpClientResource" type="http:HttpClientConfiguration">
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_Ukk-8HqjEeijEPF0ZRZxgA" httpClientVersion="httpcomponents" retryCount="3" idleConnectionTimeout="3000" cmdExecutionIsolationStrategy="THREAD" cmdExecutionIsolationTimeout="1000" cmdExecutionTimeoutEnabled="true" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="20" cmdCircuitBreakerSleepWindow="5000" cmdCircuitBreakerErrorThresholdPercentage="50" cmdMetricsRollingStatsTime="10000" cmdMetricsRollingStatsNumBuckets="10" cmdMetricsHealthSnapshotInterval="500" cmdRequestLogEnabled="true" tpCoreSize="10" tpMaxQueueSize="-1" tpQueueSizeRejectionThreshold="5" tpKeepAliveTime="1">
+    <tcpDetails xmi:id="_Ukth0HqjEeijEPF0ZRZxgA">
+      <substitutionBindings xmi:id="_3LpYQHqxEeijEPF0ZRZxgA" template="host" propName="/resources/services.ts.connections/HTTP/host"/>
+      <substitutionBindings xmi:id="_4j9PAHqxEeijEPF0ZRZxgA" template="port" propName="/resources/services.ts.connections/HTTP/port"/>
+    </tcpDetails>
+  </jndi:configuration>
+</jndi:namedResource>

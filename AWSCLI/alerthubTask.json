@@ -1,0 +1,31 @@
+{
+    "family": "AlertHub-fargate", 
+    "networkMode": "awsvpc", 
+    "taskRoleArn": "arn:aws:iam::675390051515:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::675390051515:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/AlertHub",
+          "awslogs-region": "eu-west-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "cpu": 1,
+      "memoryReservation": 2048,
+      "image": "675390051515.dkr.ecr.eu-west-1.amazonaws.com/jcranfie/bwce-demo:alerthub2",
+      "essential": true,
+      "name": "AlertHub2"
+    }
+  ],
+
+
+    "requiresCompatibilities": [
+        "FARGATE"
+    ], 
+    "cpu": "256", 
+    "memory": "2048"
+}
+

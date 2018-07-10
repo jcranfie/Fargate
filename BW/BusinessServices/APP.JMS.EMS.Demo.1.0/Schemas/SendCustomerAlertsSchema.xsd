@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:custalert="urn:com:tescobank:tbsb:services:sendcustomeralerts:v1" xmlns:ns0="urn:com:tescobank:tbsb:services:common:messagelog:v1" xmlns:ns1="urn:com:tescobank:tbsb:services:response:v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:com:tescobank:tbsb:services:sendcustomeralerts:v1">
+	<xs:import namespace="urn:com:tescobank:tbsb:services:response:v1" schemaLocation="ResponseSchema.xsd"/>
+	<xs:element name="SendCustomerAlertsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="custalert:AlertEvent"/>
+				<xs:element ref="custalert:Customer"/>
+				<xs:element minOccurs="0" ref="custalert:CustomerContact"/>
+				<xs:element minOccurs="0" ref="custalert:CustomerAlertPreferences"/>
+				<xs:element minOccurs="0" ref="custalert:AdditionalAlertDataList"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SendCustomerAlertsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns1:Response"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AlertEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="custalert:EventTypeID"/>
+				<xs:element ref="custalert:AlertDateTimeStamp"/>
+				<xs:element ref="custalert:SourceSystemID"/>
+				<xs:element ref="custalert:LineOfBusinessID"/>
+            </xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EventTypeID">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="6"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="AlertDateTimeStamp" type="xs:dateTime"/>
+	<xs:element name="SourceSystemID">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="12"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="LineOfBusinessID">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Customer">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="custalert:CustomerId"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CustomerId">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CustomerContact">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="custalert:EmailAddress"/>
+				<xs:element minOccurs="0" ref="custalert:MobilePhoneNumber"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EmailAddress">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="255"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="MobilePhoneNumber">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="13"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CustomerAlertPreferences">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="custalert:EmailAddressSuspended"/>
+				<xs:element minOccurs="0" ref="custalert:MobilePhoneNumberSuspended"/>
+				<xs:element minOccurs="0" ref="custalert:AlertsSuppressed"/>
+				<xs:element minOccurs="0" ref="custalert:CustomerPreferredDeliveryChannel"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EmailAddressSuspended" type="xs:boolean"/>
+	<xs:element name="MobilePhoneNumberSuspended" type="xs:boolean"/>
+	<xs:element name="AlertsSuppressed" type="xs:boolean"/>
+         <xs:element name="CustomerPreferredDeliveryChannel" type="xs:int"/>
+	<xs:element name="AdditionalAlertDataList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="custalert:AdditionalAlertData"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AdditionalAlertData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="custalert:AdditionalDataKey"/>
+				<xs:element ref="custalert:AdditionalDataValue"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AdditionalDataKey">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="AdditionalDataValue">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

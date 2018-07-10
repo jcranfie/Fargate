@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:bwp="urn://co-opbank.co.ke/CommonServices/Data/Internal/BWProcess" xmlns:com="urn://co-opbank.co.ke/CommonServices/Data/Common" xmlns:head="urn://co-opbank.co.ke/CommonServices/Data/Message/MessageHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="urn://co-opbank.co.ke/CommonServices/Data/Internal/BWProcess">
+
+	<!-- Imports -->
+	<xs:import namespace="urn://co-opbank.co.ke/CommonServices/Data/Common" schemaLocation="../../Common/1.0/Common.xsd"/>
+	<xs:import namespace="urn://co-opbank.co.ke/CommonServices/Data/Message/MessageHeader" schemaLocation="../../Message/1.0/MessageHeader.xsd"/>
+	
+	<!-- Elements -->
+	<xs:element name="BWProcessHeaders" type="bwp:BWProcessHeaders"/>
+	
+	<!--  Complex Types-->
+	<xs:complexType name="BWProcessHeaders">
+		<xs:sequence>
+			<xs:element minOccurs="1" ref="com:CorrelationId"/>
+			<xs:element minOccurs="0" ref="com:CreationTimestamp"/>
+			<xs:element minOccurs="0" ref="head:FaultTO"/>
+			<xs:element minOccurs="0" ref="head:MessageID"/>
+			<xs:element minOccurs="0" ref="head:ReplyTO"/>
+			<xs:element minOccurs="0" ref="head:Credentials"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

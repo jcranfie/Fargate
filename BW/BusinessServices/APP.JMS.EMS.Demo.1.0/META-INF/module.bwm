@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_zpqNQGfvEeixXsi3NVWy8w" targetNamespace="http://tns.tibco.com/bw/composite/APP.JMS.EMS.Demo.1.0.module" name="APP.JMS.EMS.Demo.1.0.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_z5aggGfvEeixXsi3NVWy8w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_z5cVsGfvEeixXsi3NVWy8w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_z5eK4GfvEeixXsi3NVWy8w" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_z5h1QGfvEeixXsi3NVWy8w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_z5lfoGfvEeixXsi3NVWy8w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_z5mtwGfvEeixXsi3NVWy8w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8lHb4HiDEeijEPF0ZRZxgA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_L7Nv0Gf0EeixXsi3NVWy8w" name="/services.ts.main/process/log.audit.enable" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_O6dIIGf0EeixXsi3NVWy8w" name="/services.ts.main/process/log.audit.payload.enable" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_O-WwsGf0EeixXsi3NVWy8w" name="/services.ts.main/process/log.audit.remotefile.enable" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_PCBvwGf0EeixXsi3NVWy8w" name="/services.ts.main/process/log.audit.remotedb.enable" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_PFn2UGf0EeixXsi3NVWy8w" name="/services.ts.main/process/log.audit.local.enable" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_PJDk0Gf0EeixXsi3NVWy8w" name="/services.ts.main/process/exception.audit.enable" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_PMLxUGf0EeixXsi3NVWy8w" name="/services.ts.main/process/exception.audit.payload.enable" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_PPnf0Gf0EeixXsi3NVWy8w" name="/services.ts.main/process/exception.audit.remotefile.enable" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_PS-V0Gf0EeixXsi3NVWy8w" name="/services.ts.main/process/exception.audit.remotedb.enable" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_PWVy4Gf0EeixXsi3NVWy8w" name="/services.ts.main/process/exception.audit.local.enable" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zeiaAGf9EeixXsi3NVWy8w" name="/resources/services.ts.connections/HTTP/port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Dh7qYHqwEeijEPF0ZRZxgA" name="/resources/services.ts.connections/HTTP/host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zGKXgHrbEeid4Nv_UBZo7w" name="/resources/services.ts.connections/HTTP/queue" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_HsGxcGf8EeixXsi3NVWy8w" name="/data/newGroup/channel.esb.in" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_INzJQGf8EeixXsi3NVWy8w" name="/data/newGroup/channel.esb.out" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_K9MuwGf8EeixXsi3NVWy8w" name="/data/newGroup/domain.esb.out" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_HqK2sGjLEeixXsi3NVWy8w" name="ComponentJMSService" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_HqK2sWjLEeixXsi3NVWy8w" processName="demo.ts.local.test.FileInput"/>
+  </sca:component>
+  <sca:component xmi:id="_isG-sHrBEeijEPF0ZRZxgA" name="Component1JMSService" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_isG-sXrBEeijEPF0ZRZxgA" processName="demo.ts.ems.JMSService"/>
+  </sca:component>
+</sca:composite>
