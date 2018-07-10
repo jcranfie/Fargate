@@ -14,6 +14,13 @@ pipeline
 				sh 'mvn -f BW/BusinessServices/APP.JMS.EMS.Demo.1.0.module.application.parent/pom.xml clean package initialize docker:build'
 			}
 		}
+		stage ('Docker Login Stage')
+		{
+			steps
+			{
+				sh 'Jenkins/loginDockerAWS.sh'
+			}
+		}
 		stage ('Push Stage')
 		{
 			steps

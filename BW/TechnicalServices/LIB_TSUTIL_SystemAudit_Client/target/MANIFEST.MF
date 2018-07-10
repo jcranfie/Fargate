@@ -1,4 +1,4 @@
-Manifest-Version: 1.0.0.201807101031
+Manifest-Version: 1.0.0.201807101438
 Bundle-SymbolicName: LIB_TSUTIL_SystemAudit_Client
 Require-Bundle: LIB_XML;bundle-version="1.0.0"
 TIBCO-BW-SharedModule: META-INF/module.bwm
@@ -23,7 +23,7 @@ Provide-Capability: com.tibco.bw.module; name="LIB_TSUTIL_SystemAudit_
  util.systemaudit",com.tibco.bw.processes; name="services.ts.util.syst
  emaudit"
 Bundle-Name: LIB_TSUTIL_SystemAudit_Client Module
-Bundle-Version: 1.0.0.201807101031
+Bundle-Version: 1.0.0.201807101438
 Bundle-ClassPath: .
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
 

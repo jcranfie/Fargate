@@ -1,4 +1,4 @@
-Manifest-Version: 1.0.0.201807101031
+Manifest-Version: 1.0.0.201807101438
 Bundle-SymbolicName: APP.JMS.EMS.Demo.1.0.module
 Require-Bundle: LIB_XML;bundle-version="1.0.0"
 Bundle-ManifestVersion: 2
@@ -20,7 +20,7 @@ Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
 TIBCO-BW-ConfigProfile: META-INF/default.substvar
 TIBCO-BW-Version: 6.4.2 V32 2017-11-05
 Bundle-Name: APP JMSServiceTemplate 1 0 Module
-Bundle-Version: 1.0.0.201807101031
+Bundle-Version: 1.0.0.201807101438
 Bundle-ClassPath: .
 TIBCO-BW-ApplicationModule: META-INF/module.bwm
 TIBCO-BW-JobSharedVariables: META-INF/module.jsv
