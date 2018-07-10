@@ -5,19 +5,11 @@ pipeline
     tools { 
         maven 'Maven-3.5.3'  
     }
+    environment {
+      PATH = "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/apache-maven-3.5.3/bin"
+    }
 	stages
 	{
-		stage ('Prep Stage')
-		{
-			steps
-			{
-				script
-				{
-	                    env.PATH = ${env.PATH}:/usr/local/bin
-	            }
-	            echo "${env.PATH}"
-			}
-		}
 		stage ('Build Stage')
 		{
 			steps
