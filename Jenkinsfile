@@ -41,5 +41,12 @@ pipeline
 				sh 'AWSCLI/createTask.sh'
 			}
 		}
+		stage ('Create Fargate Service Stage')
+		{
+			steps
+			{
+				sh 'AWSCLI/createService.sh'
+			}
+		}
 	}
 }
